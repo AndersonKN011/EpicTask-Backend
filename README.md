@@ -2,6 +2,8 @@
 
 O backend do EpicTask é uma API REST responsável por gerenciar o progresso do jogador, aplicar as regras de RPG e automatizar eventos do sistema.
 
+Swagger: https://epictask-backend-40m0.onrender.com/swagger-ui/index.html
+
 ---
 
 ## 🛠️ Tecnologias e Ferramentas
