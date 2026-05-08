@@ -4,6 +4,7 @@ import com.epictask.model.HabitModel;
 import com.epictask.model.PlayerModel;
 import com.epictask.repository.HabitRepository;
 import com.epictask.repository.PlayerRepository;
+import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -34,5 +35,20 @@ public class PlayerService {
         habit.setIsCompletedToday(true);
         habitRepository.save(habit);
         playerRepository.save(player);
+    }
+
+    @PostConstruct
+    public void createDefaultPlayer() {
+        if (playerRepository.count() == 0) {
+
+            PlayerModel player = new PlayerModel();
+
+            player.setName("Tester");
+            player.setLevel(1);
+            player.setCurrent_xp(0);
+            player.setCurrent_hp(100);
+
+            playerRepository.save(player);
+        }
     }
 }

@@ -21,7 +21,7 @@ public class PlayerController {
 
     @GetMapping("/profile")
     public PlayerModel getPlayer(){
-        return playerRepository.findById(5L).orElse(null);
+        return playerRepository.findFirstByOrderByIdAsc().orElse(null);
     }
 
     @PostMapping
