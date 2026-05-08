@@ -20,7 +20,7 @@ public class PlayerService {
 
     public void habitDone (Long id){
         HabitModel habit = habitRepository.findById(id).orElseThrow();
-        PlayerModel player = playerRepository.findById(5L).orElseThrow();
+        PlayerModel player = playerRepository.findFirstByOrderByIdAsc().orElseThrow();
 
         int newXp = player.getCurrent_xp() + habit.getXp_reward();
 
