@@ -6,6 +6,10 @@ Swagger: https://epictask-backend-40m0.onrender.com/swagger-ui/index.html
 
 ---
 
+Repositório do Frontend: https://github.com/AndersonKN011/EpicTask-Frontend
+
+---
+
 ## 🛠️ Tecnologias e Ferramentas
 
 - Java 21
